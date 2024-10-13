@@ -13,6 +13,8 @@
 		C4EA28E22CB9F2EF0078282D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4EA28E12CB9F2EF0078282D /* Base */; };
 		C4EA28E42CB9F3180078282D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EA28E32CB9F3180078282D /* Assets.xcassets */; };
 		C4EA28E72CB9F3180078282D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4EA28E62CB9F3180078282D /* Base */; };
+		C4EA28EF2CBA52320078282D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA28EE2CBA52320078282D /* Logger.swift */; };
+		C4EA28F12CBA6C5B0078282D /* go_to_sleep_alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = C4EA28F02CBA6C5A0078282D /* go_to_sleep_alert.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C4EA28E32CB9F3180078282D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4EA28E62CB9F3180078282D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4EA28E82CB9F3190078282D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4EA28EE2CBA52320078282D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		C4EA28F02CBA6C5A0078282D /* go_to_sleep_alert.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = go_to_sleep_alert.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C4EA28E32CB9F3180078282D /* Assets.xcassets */,
 				C4EA28E52CB9F3180078282D /* LaunchScreen.storyboard */,
 				C4EA28E82CB9F3190078282D /* Info.plist */,
+				C4EA28F02CBA6C5A0078282D /* go_to_sleep_alert.caf */,
+				C4EA28EE2CBA52320078282D /* Logger.swift */,
 			);
 			path = CountdownNotification;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EA28F12CBA6C5B0078282D /* go_to_sleep_alert.caf in Resources */,
 				C4EA28E42CB9F3180078282D /* Assets.xcassets in Resources */,
 				C4EA28E72CB9F3180078282D /* Base in Resources */,
 				C4EA28E22CB9F2EF0078282D /* Base in Resources */,
@@ -141,6 +148,7 @@
 				C4EA28DF2CB9F2EF0078282D /* ViewController.swift in Sources */,
 				C4EA28DB2CB9F2EF0078282D /* AppDelegate.swift in Sources */,
 				C4EA28DD2CB9F2EF0078282D /* SceneDelegate.swift in Sources */,
+				C4EA28EF2CBA52320078282D /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +298,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T7PXWQXBB4;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T7PXWQXBB4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CountdownNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = " 倒计时通知";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +319,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.kerdis.CountdownNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WildcardDevelop;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,16 +332,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T7PXWQXBB4;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T7PXWQXBB4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CountdownNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = " 倒计时通知";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +353,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.kerdis.CountdownNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WildcardDevelop;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
